@@ -5,8 +5,8 @@ export default function Home() {
   const allPostsData = getSortedPostsData();
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-200 selection:bg-emerald-500/30">
-      <main className="max-w-4xl mx-auto py-20 px-6">
+    <>
+      <div className="max-w-4xl mx-auto py-12 px-6">
         <header className="mb-20">
           <div className="inline-flex items-center space-x-2 bg-slate-900 border border-slate-800 rounded-full px-3 py-1 mb-6">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
@@ -46,7 +46,7 @@ export default function Home() {
             ))}
           </div>
         </section>
-      </main>
-    </div>
+      </div>
+    </>
   );
 }

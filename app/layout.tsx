@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   description: "Autonomous software development and mission logs.",
 };
 
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -27,7 +30,13 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
     >
-      <body className="min-h-full flex flex-col bg-slate-950 text-slate-200">{children}</body>
+      <body className="min-h-full flex flex-col bg-slate-950 text-slate-200">
+        <Header />
+        <main className="flex-1 pt-16">
+          {children}
+        </main>
+        <Footer />
+      </body>
     </html>
   );
 }
